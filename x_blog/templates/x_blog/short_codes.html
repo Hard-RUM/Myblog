@@ -1,0 +1,17 @@
+{% extends 'x_blog/base.html' %}
+{% load static %}
+{% block main %}
+<!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+        <nav class="stroke">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'x_blog:index' %}" class="hvr-underline-from-left"><i class="home1"></i>Home</a></li>
+                <li><a href="{% url 'x_blog:photos' %}" class="hvr-underline-from-left"><i class="picture1"></i>Photos</a></li>
+                <li><a href="{% url 'x_blog:blog' %}" class="hvr-underline-from-left"><i class="edit1"></i>Blog</a></li>
+                <li class="active"><a href="{% url 'x_blog:short_codes' %}"><i class="text-size"></i>Short Codes</a></li>
+                <li><a href="{% url 'x_blog:mail' %}" class="hvr-underline-from-left"><i class="envelope1"></i>Mail US</a></li>
+            </ul>
+        </nav>
+    </div>
+{% endblock %}
+

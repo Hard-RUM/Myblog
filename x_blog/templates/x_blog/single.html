@@ -1,0 +1,136 @@
+{% extends 'x_blog/base.html' %}
+{% load static %}
+{% load x_blog_tag %}
+{% block main %}
+<!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+        <nav class="stroke">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'x_blog:index' %}" class="hvr-underline-from-left"><i class="home1"></i>首页</a></li>
+                <li><a href="{% url 'x_blog:photos' %}" class="hvr-underline-from-left"><i class="picture1"></i>照片墙</a></li>
+                <li><a href="{% url 'x_blog:blog' %}" class="hvr-underline-from-left"><i class="edit1"></i>博客</a></li>
+                <li><a href="{% url 'x_blog:short_codes' %}" class="hvr-underline-from-left"><i class="text-size1"></i>Short Codes</a></li>
+                <li><a href="{% url 'x_blog:mail' %}" class="hvr-underline-from-left"><i class="envelope1"></i>联系 博主</a></li>
+            </ul>
+        </nav>
+    </div>
+{% endblock %}
+
+{% block main2 %}
+    <div class="col-xs-9 banner-body-right">
+        <!-- single -->
+            <div class="single">
+                <h3>{{ post.title }}</h3>
+                <div class="single-left">
+                    <p>发布于 <span>{{ post.created_time|date:"Y年m月d日" }}</span></p>
+                    <img src="/static/{{ post.img }}" alt=" " class="img-responsive" />
+                </div>
+                <div class="single-right">
+                    <h4>{{ post.subtitle_title }}</h4>
+                    <p><span>{{ post.content_1 }}</span></p>
+                </div>
+
+                <div class="clearfix"> </div>
+                <p class="tortor">{{ post.content_2 | safe }}</p>
+
+                <div class="tags-cate">
+                    <div class="cat-grid">
+                        <h4><span>分</span>类</h4>
+                        {% classification as categories %}
+                        <ul>
+                            {% for cate in categories %}
+                            <li>
+                                <a href="{% url 'x_blog:categories' cate.id %}">{{ cate.name }}</a>
+                            </li>
+                            {% empty %}
+                                暂无分类
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="cat-grid">
+                        <h4><span>归</span>档</h4>
+                        {% archives as dates %}
+                        <ul>
+                            {% for date in dates %}
+                            <li>
+                                <a href="{% url 'x_blog:archives' date.year date.month %}">{{ date.year }} 年 {{ date.month }} 月 </a>
+                            </li>
+                            {% empty %}
+                                暂无归档
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="cat-grid">
+                        <h4><span>文章</span>标签</h4>
+                        <div class="top-social-icons">
+                                <a href="#">Cards</a>
+                                <a href="#">Website</a>
+                                <a href="#">Icons</a>
+                            <div class="clearfix"> </div>
+                                <a href="#">Themeforest</a>
+                                <a href="#">Interfaces</a>
+                            <div class="clearfix"> </div>
+                                <a href="#">Inspiration</a>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="three-com">
+                    <h3>2 Comment <span>on</span> <label>Donec volutpat ligula non dapibus volutpat</label></h3>
+                    <div class="tom-grid">
+                        <div class="tom">
+                            <img src="{% static 'x_blog/images/co.png' %}" alt=" " />
+                        </div>
+                        <div class="tom-right">
+                            <div class="Hardy">
+                                <h4><a href="#">Tom Hardy</a></h4>
+                                <p><label>12 March 2016</label></p>
+                            </div>
+                            <div class="reply">
+                                <a href="#">Reply</a>
+                            </div>
+                            <div class="clearfix"> </div>
+                            <p class="lorem">There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form, by injected humour,
+                            or randomised words which don't.</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="tom-grid humour">
+                        <div class="tom">
+                            <img src="{% static 'x_blog/images/co.png' %}" alt=" " />
+                        </div>
+                        <div class="tom-right">
+                            <div class="Hardy">
+                                <h4><a href="#">Prad Pitt</a></h4>
+                                <p><label>13 March 2016</label></p>
+                            </div>
+                            <div class="reply">
+                                <a href="#">Reply</a>
+                            </div>
+                            <div class="clearfix"> </div>
+                            <p class="lorem">There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form, by injected humour,
+                            or randomised words which don't.</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="leave-comment">
+                    <h4>Leave your comment</h4>
+                    <p>Suspendisse tempor tellus sed nisl semper, quis condimentum turpis pharetra.</p>
+                    <form>
+                        <input type="text" placeholder="Name" required=" ">
+                        <input type="text" placeholder="Email" required=" ">
+                        <input type="text" placeholder="Your Website" required=" ">
+                        <textarea placeholder="Message" required></textarea>
+                        <input type="submit" value="Submit">
+                        <div class="clearfix"> </div>
+                    </form>
+                </div>
+            </div>
+
+        <!-- //single -->
+    </div>
+{% endblock %}
