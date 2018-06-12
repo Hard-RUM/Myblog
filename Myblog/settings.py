@@ -24,7 +24,7 @@ SECRET_KEY = '#jsro_6t04v3yg%53fqhkma01#ml5nzu8en4t+b97bozglz6f%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -167,7 +167,7 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': os.path.join(BASE_DIR, "log", 'debug.log'),  # 日志输出文件
-            'maxBytes': 1024 * 1024 * 5,  # 文件大小
+            'maxBytes': 1024 * 1024 * 5,  # 文件大小5mb
             'backupCount': 5,  # 备份份数
             'formatter': 'standard',  # 使用哪种formatters日志格式
         },
