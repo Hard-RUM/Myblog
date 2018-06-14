@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 
+
 # Create your models here.
 
 
@@ -45,13 +46,31 @@ class Post(models.Model):
     category = models.ForeignKey('Category', verbose_name='博客类别')
     tag = models.ManyToManyField('Tag', blank=True, verbose_name='博客标签')
     # author = models.ForeignKey(User, verbose_name='帖子作者')
+    # 增加文章浏览数，默认初始为0
+    views = models.PositiveIntegerField(default=0)
+    #增加点赞次数，默认为0
+    like = models.PositiveIntegerField(default=0)
+
+    # 增加统计博客阅读数的方法
+    def increase_views(self):
+        # 每次调用此方法，就把views加1
+        self.views += 1
+        # 只更新views字段
+        self.save(update_fields=['views'])
+
+    # 增加点赞次数的方法，规定只能点一次
+    def increase_like(self):
+        # 每次调用此方法，就把like加1
+        self.like += 1
+        #只更新like字段
+        self.save(update_fields=['like'])
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
-        #返回这个字符串：/post/1/
-        return reverse('x_blog:single',kwargs={'pk': self.pk})
+        # 返回这个字符串：/post/1/
+        return reverse('x_blog:single', kwargs={'pk': self.pk})
 
     class Meta:
         verbose_name_plural = '博客页管理'

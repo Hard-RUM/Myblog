@@ -37,9 +37,9 @@
                         <p align="left">
                             <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> <td>{{ post.created_time|date:"Y-m-d" }}</td>
                             &ensp;
-                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 访问量
+                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> {{ post.views }}
                             &ensp;
-                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 点赞次数
+                            <a href="javascript:void(0)" onclick = "by1();"/><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></a> {{ post.like }}
                             <a href="{{ post.get_absolute_url }}" style="margin-left: 142px"> 阅读全文
                                 <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
                             </a>

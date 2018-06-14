@@ -39,16 +39,27 @@ def single(request, pk):
                                            'markdown.extensions.toc'
                                        ])
     post_list = Post.objects.all().order_by('-created_time')
+    post.increase_views()
     return render(request, 'x_blog/single.html', locals())
 
 
 def archives(request, year, month):
+    post = Post.objects.get(request)
     post_list = Post.objects.filter(created_time__year=year,
                                     created_time__month=month).order_by("-created_time")
+    post.increase_like()
     return render(request, 'x_blog/blog.html', locals())
 
 
-def categories(request,pk):
+# def detail(request, pk):
+#     post = get_object_or_404(Post, pk=pk)
+#
+#     post.increase_views()
+#     return render(request, 'x_blog/blog.html', locals())
+
+
+def categories(request, pk):
     category = get_object_or_404(Category, pk=pk)
     post_list = category.post_set.all()
+
     return render(request, 'x_blog/blog.html', {'post_list': post_list})
