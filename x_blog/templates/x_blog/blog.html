@@ -9,8 +9,7 @@
                 <li><a href="{% url 'x_blog:photos' %}" class="hvr-underline-from-left"><i class="picture1"></i>照片墙</a>
                 </li>
                 <li class="active"><a href="{% url 'x_blog:blog' %}"><i class="edit"></i>博客</a></li>
-                <li><a href="{% url 'x_blog:short_codes' %}" class="hvr-underline-from-left"><i class="text-size1"></i>Short
-                    Codes</a></li>
+                <li><a href="{% url 'x_blog:short_codes' %}" class="hvr-underline-from-left"><i class="text-size1"></i>Short Codes</a></li>
                 <li><a href="{% url 'x_blog:mail' %}" class="hvr-underline-from-left"><i class="envelope1"></i>联系 博主</a>
                 </li>
             </ul>
@@ -28,8 +27,7 @@
             {% for post in post_list %}
                 <div class="blog-grid">
                     <div class="col-xs-4 blog-grid-left">
-                        <a href="{{ post.get_absolute_url }}"><img src="/static/{{ post.img }}" alt=" "
-                                                                 class="img-responsive"/></a>
+                        <a href="{{ post.get_absolute_url }}"><img src="/static/{{ post.img }}" alt=" " class="img-responsive"/></a>
                     </div>
                     <div class="col-xs-8 blog-grid-right">
                         <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
@@ -47,11 +45,11 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                {% empty %}
-                    暂无文章
+            {% empty %}
+                暂无文章
             {% endfor %}
             <nav aria-label="Page navigation">
-                  <ul class="pagination" style="margin-left: 250px;margin-top: 50px">
+                <ul class="pagination" style="margin-left: 250px;margin-top: 50px">
                     <li class="disabled">
                       <span href="#" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
@@ -63,19 +61,18 @@
                     <li><span href="#">4</span></li>
                     <li><span href="#">5</span></li>
                     <li>
-                      <a href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                      </a>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
                     </li>
-                  </ul>
+                </ul>
             </nav>
         </div>
 
         <div class="msg-text-bottom">
             <div class="col-md-4 msg-text-bottom-left">
                 <figure class="effect-winston">
-                    <a href="#"><img src="{% static 'x_blog/images/4.jpg' %}" alt=" "
-                                                             class="img-responsive"/>
+                    <a href="#"><img src="{% static 'x_blog/images/4.jpg' %}" alt=" " class="img-responsive"/>
                         <figcaption>
 
                         </figcaption>
@@ -88,8 +85,7 @@
             </div>
             <div class="col-md-4 msg-text-bottom-left">
                 <figure class="effect-winston">
-                    <a href="#"><img src="{% static 'x_blog/images/5.jpg' %}" alt=" "
-                                                             class="img-responsive"/>
+                    <a href="#"><img src="{% static 'x_blog/images/5.jpg' %}" alt=" " class="img-responsive"/>
                         <figcaption>
 
                         </figcaption>
@@ -101,8 +97,7 @@
             </div>
             <div class="col-md-4 msg-text-bottom-left">
                 <figure class="effect-winston">
-                    <a href="#"><img src="{% static 'x_blog/images/6.jpg' %}" alt=" "
-                                                             class="img-responsive"/>
+                    <a href="#"><img src="{% static 'x_blog/images/6.jpg' %}" alt=" " class="img-responsive"/>
                         <figcaption>
 
                         </figcaption>

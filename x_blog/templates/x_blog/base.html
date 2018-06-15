@@ -3,191 +3,191 @@
 {% load x_blog_tag %}
 <html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="icon" href="{% static "x_blog/images/c1.ico" %}" type="image/x-icon" />
-<title>Home</title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Great Taste Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="{% static "x_blog/images/c1.ico" %}" type="image/x-icon"/>
+    <title>Home</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Great Taste Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
 
-<!-- //for-mobile-apps -->
-<link href="{% static 'x_blog/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
-<link href="{% static 'x_blog/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
-<!--css-->
-<link rel="stylesheet" href="{% static 'x_blog/css/highlights/github.css' %}"/>
-<!-- js -->
-<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
-<!-- //js -->
-<link href='http://fonts.useso.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.useso.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-<link href='http://fonts.useso.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- //for-mobile-apps -->
+    <link href="{% static 'x_blog/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="{% static 'x_blog/css/style.css' %}" rel="stylesheet" type="text/css" media="all"/>
+    <!--css-->
+    <link rel="stylesheet" href="{% static 'x_blog/css/highlights/github.css' %}"/>
+    <!-- js -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- //js -->
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 <!-- banner-body -->
-	<div class="banner-body">
-		<div class="container">
-			<div class="banner-body-content">
-			<div class="col-xs-3 banner-body-left">
-				<div class="logo">
-					<h1><a href="{% url 'x_blog:index' %}">舌尖 <span>美食</span></a></h1>
-				</div>
-				<div class="top-nav">
-					<nav class="navbar navbar-default">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						  </button>
-						</div>
+<div class="banner-body">
+    <div class="container">
+        <div class="banner-body-content">
+            <div class="col-xs-3 banner-body-left">
+                <div class="logo">
+                    <h1><a href="{% url 'x_blog:index' %}">舌尖 <span>美食</span></a></h1>
+                </div>
+                <div class="top-nav">
+                    <nav class="navbar navbar-default">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
                         {% block main %}
 
                         {% endblock %}
-                    <!-- /.navbar-collapse -->
-					</nav>
-				</div>
-			</div>
-			<div class="col-xs-9 banner-body-right">
-				<div class="wmuSlider example1">
-					<div class="wmuSliderWrapper">
-						<article style="position: absolute; width: 100%; opacity: 0;">
-							<div class="banner-wrap">
-								<div class="banner">
-								</div>
-							</div>
-						</article>
-						<article style="position: absolute; width: 100%; opacity: 0;">
-							<div class="banner-wrap">
-								<div class="banner1">
-								</div>
-							</div>
-						</article>
-						<article style="position: absolute; width: 100%; opacity: 0;">
-							<div class="banner-wrap">
-								<div class="banner2">
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-					<script src="{% static 'x_blog/js/jquery.wmuSlider.js' %}"></script>
-					  <script>
-						$('.example1').wmuSlider();         
-					 </script> 
-				<div class="banner-bottom">
-					<div class="col-md-4 banner-left">
-						<div class="col-xs-3 banner-left1">
-							<div class="banner-left11">
-								<span> </span>
-							</div>
-						</div>
-						<div class="col-xs-9 banner-right1">
-							<h3>cupidatat proi</h3>
-						</div>
-						<div class="clearfix"> </div>
-						<p>Excepteur sint occaecat cupidatat non proident, 
-							sunt in culpa qui.</p>
-					</div>
-					<div class="col-md-4 banner-left">
-						<div class="col-xs-3 banner-left1">
-							<div class="banner-left22">
-								<span> </span>
-							</div>
-						</div>
-						<div class="col-xs-9 banner-right1">
-							<h3>sint occaecat</h3>
-						</div>
-						<div class="clearfix"> </div>
-						<p>Excepteur sint occaecat cupidatat non proident, 
-							sunt in culpa qui.</p>
-					</div>
-					<div class="col-md-4 banner-left">
-						<div class="col-xs-3 banner-left1">
-							<div class="banner-left33">
-								<span> </span>
-							</div>
-						</div>
-						<div class="col-xs-9 banner-right1">
-							<h3>cupida quisu</h3>
-						</div>
-						<div class="clearfix"> </div>
-						<p>Excepteur sint occaecat cupidatat non proident, 
-							sunt in culpa qui.</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-			<div class="clearfix"> </div>
-			<div class="col-xs-3 banner-body-left">
-				<div class="latest-news">
-					<h2>最新文章</h2>
+                        <!-- /.navbar-collapse -->
+                    </nav>
+                </div>
+            </div>
+            <div class="col-xs-9 banner-body-right">
+                <div class="wmuSlider example1">
+                    <div class="wmuSliderWrapper">
+                        <article style="position: absolute; width: 100%; opacity: 0;">
+                            <div class="banner-wrap">
+                                <div class="banner">
+                                </div>
+                            </div>
+                        </article>
+                        <article style="position: absolute; width: 100%; opacity: 0;">
+                            <div class="banner-wrap">
+                                <div class="banner1">
+                                </div>
+                            </div>
+                        </article>
+                        <article style="position: absolute; width: 100%; opacity: 0;">
+                            <div class="banner-wrap">
+                                <div class="banner2">
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <script src="{% static 'x_blog/js/jquery.wmuSlider.js' %}"></script>
+                <script>
+                    $('.example1').wmuSlider();
+                </script>
+                <div class="banner-bottom">
+                    <div class="col-md-4 banner-left">
+                        <div class="col-xs-3 banner-left1">
+                            <div class="banner-left11">
+                                <span> </span>
+                            </div>
+                        </div>
+                        <div class="col-xs-9 banner-right1">
+                            <h3>cupidatat proi</h3>
+                        </div>
+                        <div class="clearfix"></div>
+                        <p>Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui.</p>
+                    </div>
+                    <div class="col-md-4 banner-left">
+                        <div class="col-xs-3 banner-left1">
+                            <div class="banner-left22">
+                                <span> </span>
+                            </div>
+                        </div>
+                        <div class="col-xs-9 banner-right1">
+                            <h3>sint occaecat</h3>
+                        </div>
+                        <div class="clearfix"></div>
+                        <p>Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui.</p>
+                    </div>
+                    <div class="col-md-4 banner-left">
+                        <div class="col-xs-3 banner-left1">
+                            <div class="banner-left33">
+                                <span> </span>
+                            </div>
+                        </div>
+                        <div class="col-xs-9 banner-right1">
+                            <h3>cupida quisu</h3>
+                        </div>
+                        <div class="clearfix"></div>
+                        <p>Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui.</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-xs-3 banner-body-left">
+                <div class="latest-news">
+                    <h2>最新文章</h2>
                     {% get_recent_posts_list as recent_posts %}
-					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    {% for post in recent_posts %}
-					  <div class="panel panel-default">
-						<div class="panel-heading" role="tab" id="headingOne">
-						  <h4 class="panel-title">
-							<a href="{{ post.get_absolute_url }}" role="button" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">
-							  {{ post.title }}
-							</a>
-						  </h4>
-						</div>
-					  </div>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        {% for post in recent_posts %}
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a href="{{ post.get_absolute_url }}" role="button" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">
+                                            {{ post.title }}
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
                         {% empty %}
-                                暂无文章
-                    {% endfor %}
-					</div>
-					<div class="join">
-						<a href="{% url 'x_blog:blog' %}">获取更多</a>
-					</div>
-					<h3>站内搜索</h3>
+                            暂无文章
+                        {% endfor %}
+                    </div>
+                    <div class="join">
+                        <a href="{% url 'x_blog:blog' %}">获取更多</a>
+                    </div>
+                    <h3>文章搜索</h3>
                     <div style="padding: 10px;">
-	                    <form class="bs-example bs-example-form" role="form">
-		                    <div class="input-group input-group-lg">
-			                    <span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
-			                    <input type="text" class="form-control" placeholder="Twitterhandle">
-		                    </div>
-	                    </form>
+                        <form class="bs-example bs-example-form" role="form" action="{% url 'haystack_search' %}">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+                                <input type="text" class="form-control" placeholder="请输入文章">
+                            </div>
+                        </form>
                     </div>
                     <h3>添加更多</h3>
-				</div>
-			</div>
-                {% block main2 %}
+                </div>
+            </div>
+            {% block main2 %}
 
-                {% endblock %}
-			<div class="clearfix"> </div>
-			<div class="footer">
-				<div class="footer-left">
-					<ul>
-						<li><a href="#">Privacy Policy</a>|</li>
-						<li><a href="#">Terms of Use</a>|</li>
-						<li><a href="mail.html">Contact Us</a></li>
-					</ul>
-					<p>Copyright &copy; 2016.Company name All rights reserved.</p>
-				</div>
-				<div class="footer-right">
-					<ul class="social-nav model-3">
-						<li><a href="#" class="icon icon-border facebook"></a></li>
-						<li><a href="#" class="icon icon-border twitter"></a></li>
-						 <li><a href="#" class="icon icon-border googleplus"></a></li>
-						 <li><a href="#" class="icon icon-border github"></a></li>
-						 <li><a href="#" class="icon icon-border rss"></a></li>
-					</ul>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-		</div>
-	</div>
+            {% endblock %}
+            <div class="clearfix"></div>
+            <div class="footer">
+                <div class="footer-left">
+                    <ul>
+                        <li><a href="#">Privacy Policy</a>|</li>
+                        <li><a href="#">Terms of Use</a>|</li>
+                        <li><a href="mail.html">Contact Us</a></li>
+                    </ul>
+                    <p>Copyright &copy; 2016.Company name All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <ul class="social-nav model-3">
+                        <li><a href="#" class="icon icon-border facebook"></a></li>
+                        <li><a href="#" class="icon icon-border twitter"></a></li>
+                        <li><a href="#" class="icon icon-border googleplus"></a></li>
+                        <li><a href="#" class="icon icon-border github"></a></li>
+                        <li><a href="#" class="icon icon-border rss"></a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- //banner-body -->
 <!-- for bootstrap working -->
-	<script src="{% static 'x_blog/js/bootstrap.js' %}"></script>
+<script src="{% static 'x_blog/js/bootstrap.js' %}"></script>
 <!-- //for bootstrap working -->
 </body>
 </html>
