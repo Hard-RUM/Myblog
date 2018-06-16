@@ -51,6 +51,7 @@ def archives(request, year, month):
     return render(request, 'x_blog/blog.html', locals())
 
 
+
 # def detail(request, pk):
 #     post = get_object_or_404(Post, pk=pk)
 #
