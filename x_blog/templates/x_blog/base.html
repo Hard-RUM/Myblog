@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="{% static "x_blog/images/c1.ico" %}" type="image/x-icon"/>
     <title>Home</title>
+    <style>
+        span.highlighted {
+            clolor:red;
+        }
+    </style>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -148,7 +153,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <h3>文章搜索</h3>
                     <div style="padding: 10px;">
-                        <form class="bs-example bs-example-form" role="form" action="">
+                        <form class="bs-example bs-example-form" role="form" action="{% url 'haystack_search' %}">
                             <div class="input-group input-group-lg">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
                                 <input type="text" class="form-control" placeholder="请输入文章">
