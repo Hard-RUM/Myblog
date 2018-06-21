@@ -1,8 +1,23 @@
-{% extends 'x_blog/base.html' %}
+{% extends 'base.html' %}
 {% load highlight %}
 {#{% load debugtools_tags %}#}
-
 {% block main %}
+    <!-- 收集导航链接，表单和其他内容以进行切换 -->
+    <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+        <nav class="stroke">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{% url 'x_blog:index' %}"><i class="home"></i>首页</a></li>
+                <li><a href="{% url 'x_blog:photos' %}" class="hvr-underline-from-left"><i class="picture1"></i>照片墙</a></li>
+                <li><a href="{% url 'x_blog:blog' %}" class="hvr-underline-from-left"><i class="edit1"></i>博客</a></li>
+                <li><a href="{% url 'x_blog:short_codes' %}" class="hvr-underline-from-left"><i class="text-size1"></i>Short Codes</a></li>
+                <li><a href="{% url 'x_blog:mail' %}" class="hvr-underline-from-left"><i class="envelope1"></i>联系 博主</a></li>
+            </ul>
+        </nav>
+    </div>
+{% endblock %}
+
+
+{% block main2 %}
 {#    {% print query %}#}
     {% if query %}
         {% for result in page.object_list %}
@@ -13,7 +28,7 @@
                     </h1>
                     <div class="entry-meta">
                     <span class="post-category">
-                        <a href="{% url 'blog:category' result.object.category.pk %}">
+                        <a href="{% url 'x_blog:categories' result.object.category.pk %}">
                             {{ result.object.category.name }}</a></span>
                         <span class="post-date"><a href="#">
                             <time class="entry-date" datetime="{{ result.object.created_time }}">
@@ -50,4 +65,4 @@
     {% else %}
         请输入搜索关键词，例如 django
     {% endif %}
-{% endblock main %}
+{% endblock main2 %}

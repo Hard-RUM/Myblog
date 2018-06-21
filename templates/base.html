@@ -153,10 +153,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <h3>文章搜索</h3>
                     <div style="padding: 10px;">
-                        <form class="bs-example bs-example-form" role="form" action="{% url 'haystack_search' %}">
+                        <form role="search" method="get" id="searchform" action="{% url 'haystack_search' %}">
                             <div class="input-group input-group-lg">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
-                                <input type="text" class="form-control" placeholder="请输入文章">
+                                <input type="search" class="form-control" placeholder="搜索" name="q">
                             </div>
                         </form>
                     </div>
@@ -172,7 +172,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul>
                         <li><a href="#">Privacy Policy</a>|</li>
                         <li><a href="#">Terms of Use</a>|</li>
-                        <li><a href="mail.html">Contact Us</a></li>
+                        <li><a href="../x_blog/templates/x_blog/mail.html">Contact Us</a></li>
                     </ul>
                     <p>Copyright &copy; 2016.Company name All rights reserved.</p>
                 </div>

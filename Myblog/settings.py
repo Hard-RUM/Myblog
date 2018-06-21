@@ -35,8 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'x_blog',
     'haystack',
+    'x_blog',
     'comments',
 ]
 

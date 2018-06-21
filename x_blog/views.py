@@ -7,7 +7,7 @@ import markdown
 
 def index(request):
     # return HttpResponse('Text OK')
-    return render(request, 'x_blog/index.html', locals())
+    return render(request, 'index.html', locals())
 
 
 def blog(request):
