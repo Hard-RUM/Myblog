@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from .views import index, photos, blog, mail, short_codes, single, archives,categories
+from .views import index, photos, blog, mail, short_codes, single, archives,categories,BlogView
 
 app_name = 'x_blog'
 
