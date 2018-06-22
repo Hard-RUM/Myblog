@@ -22,10 +22,10 @@ def blog(request):
 
 class BlogView(ListView):
     model = Post
-    template_name = 'index.html'
+    template_name = 'x_blog/blog.html'
     context_object_name = 'post_list'
     # 开始分页功能，每页放3条数据
-    paginate_by = 3
+    paginate_by = 2
 
     # 重写get_context_data,放入分页的起始页面和结束页码
     def get_context_data(self, **kwargs):

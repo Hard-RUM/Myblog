@@ -11,7 +11,7 @@ urlpatterns = [
 
     url(r'^photos/$', photos, name='photos'),
 
-    url(r'^blog/', blog, name='blog'),
+    url(r'^blog/$', BlogView.as_view(), name='blog'),
 
     url(r'^short-codes/$', short_codes, name='short_codes'),
 
