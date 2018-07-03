@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from .models import Post, Category
 from django.views.generic import ListView
 from utils import custom_paginator
+from comments.forms import CommentForm
 import markdown
 
 
@@ -59,7 +60,11 @@ def mail(request):
 
 
 def single(request, pk):
-    post = Post.objects.get(pk=pk)
+    post = get_object_or_404(Post, pk=pk)
+    #生成评论form表单
+    form = CommentForm()
+    #把post的评论列表传到前台
+    comment_list = post.comment_set.all().order_by('created_time')
     # 后台返回个文章列表
     post.content_2 = markdown.markdown(post.content_2,
                                        extensions=[

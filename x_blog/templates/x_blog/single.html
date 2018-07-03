@@ -76,55 +76,40 @@
                     </div>
                     <div class="clearfix"> </div>
                 </div>
+
                 <div class="three-com">
                     <h3>2 Comment <span>on</span> <label>Donec volutpat ligula non dapibus volutpat</label></h3>
                     <div class="tom-grid">
+                        {% for comment in comment_list %}
                         <div class="tom">
                             <img src="{% static 'x_blog/images/co.png' %}" alt=" " />
                         </div>
                         <div class="tom-right">
                             <div class="Hardy">
-                                <h4><a href="#">Tom Hardy</a></h4>
-                                <p><label>12 March 2016</label></p>
+                                <h4><a href="#">{{ comment.name }}</a></h4>
+                                <p><label>{{ comment.created_time }}</label></p>
                             </div>
                             <div class="reply">
-                                <a href="#">Reply</a>
+                                <a href="#">回复</a>
                             </div>
                             <div class="clearfix"> </div>
-                            <p class="lorem">There are many variations of passages of Lorem Ipsum available,
-                            but the majority have suffered alteration in some form, by injected humour,
-                            or randomised words which don't.</p>
+                            <p class="lorem">{{ comment.text }}</p>
                         </div>
                         <div class="clearfix"> </div>
+                        {% endfor %}
                     </div>
-                    <div class="tom-grid humour">
-                        <div class="tom">
-                            <img src="{% static 'x_blog/images/co.png' %}" alt=" " />
-                        </div>
-                        <div class="tom-right">
-                            <div class="Hardy">
-                                <h4><a href="#">Prad Pitt</a></h4>
-                                <p><label>13 March 2016</label></p>
-                            </div>
-                            <div class="reply">
-                                <a href="#">Reply</a>
-                            </div>
-                            <div class="clearfix"> </div>
-                            <p class="lorem">There are many variations of passages of Lorem Ipsum available,
-                            but the majority have suffered alteration in some form, by injected humour,
-                            or randomised words which don't.</p>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
+
                 </div>
+
                 <div class="leave-comment">
-                    <h4>Leave your comment</h4>
+                    <h4>请发表您的看法</h4>
                     <p>Suspendisse tempor tellus sed nisl semper, quis condimentum turpis pharetra.</p>
-                    <form>
-                        <input type="text" placeholder="Name" required=" ">
-                        <input type="text" placeholder="Email" required=" ">
-                        <input type="text" placeholder="Your Website" required=" ">
-                        <textarea placeholder="Message" required></textarea>
+                    <form action="{% url 'comments:post_comment' post.pk %}" method="post" class="comment-form">
+                        {% csrf_token %}
+                        <input type="text" for="{{ form.name.id_for_label }}" placeholder="名字" {{ form.name }} {{ form.name.errors }}>
+                        <input type="text" for="{{ form.email.id_for_label }}" placeholder="邮箱" {{ form.email }} {{ form.email.errors }}>
+                        <input type="text" for="{{ form.url.id_for_label }}" placeholder="网址" {{ form.url }} {{ form.url.errors }}>
+                        <textarea for="{{ form.text.id_for_label }}" placeholder="留言" {{ form.text }} {{ form.text.errors }}></textarea>
                         <input type="submit" value="Submit">
                         <div class="clearfix"> </div>
                     </form>

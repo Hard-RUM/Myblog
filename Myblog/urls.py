@@ -21,5 +21,6 @@ from django.conf import settings
 urlpatterns = [
     url(r'^',include('x_blog.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^comments/',include('comments.urls')),
     url(r'^search/',include('haystack.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
