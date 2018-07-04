@@ -96,6 +96,8 @@
                             <p class="lorem">{{ comment.text }}</p>
                         </div>
                         <div class="clearfix"> </div>
+                        <table class="table"></table>
+                        <table class="table"></table>
                         {% endfor %}
                     </div>
 
@@ -106,11 +108,12 @@
                     <p>Suspendisse tempor tellus sed nisl semper, quis condimentum turpis pharetra.</p>
                     <form action="{% url 'comments:post_comment' post.pk %}" method="post" class="comment-form">
                         {% csrf_token %}
-                        <input type="text" for="{{ form.name.id_for_label }}" placeholder="名字" {{ form.name }} {{ form.name.errors }}>
-                        <input type="text" for="{{ form.email.id_for_label }}" placeholder="邮箱" {{ form.email }} {{ form.email.errors }}>
-                        <input type="text" for="{{ form.url.id_for_label }}" placeholder="网址" {{ form.url }} {{ form.url.errors }}>
-                        <textarea for="{{ form.text.id_for_label }}" placeholder="留言" {{ form.text }} {{ form.text.errors }}></textarea>
-                        <input type="submit" value="Submit">
+                        <input type="text" for="{{ form.name.id_for_label }}" placeholder="名字" {{ form.name }} {{ form.name.errors }}
+                        <input type="text" for="{{ form.email.id_for_label }}" placeholder="邮箱" {{ form.email }} {{ form.email.errors }}
+                        <table class="table"></table>
+                        <input type="text" for="{{ form.url.id_for_label }}" placeholder="网址" {{ form.url }} {{ form.url.errors }}
+                        <textarea for="{{ form.text.id_for_label }}" placeholder="留言" {{ form.text }} {{ form.text.errors }}</textarea>
+                        <input type="submit" value="提交">
                         <div class="clearfix"> </div>
                     </form>
                 </div>
