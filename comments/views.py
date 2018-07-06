@@ -27,7 +27,6 @@ def post_comment(request, pk):
         else:
             # 如果数据不合法，则返回原界面
             # 需要传form对象，post的评论列表
-
             # 取出post的评论列表，通过post来反向取
             comment_list = post.comment_set.all().order_by('created_time')
             context = {

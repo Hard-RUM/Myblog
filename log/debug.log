@@ -383,3 +383,298 @@ Traceback (most recent call last):
   File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
     (bit, current))  # missing attribute
 django.template.base.VariableDoesNotExist: Failed lookup for key [content] in '’‚ «∏ˆ≤‚ ‘'
+2018-07-06 11:18:13,737 [Thread-2:5468] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /single/7/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1054, "Unknown column 'comments_comment.head_img' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\Myblog\x_blog\views.py", line 77, in single
+    return render(request, 'x_blog/single.html', locals())
+  File "D:\Myblog\xblogff\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 232, in __len__
+    self._fetch_all()
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\compiler.py", line 899, in execute_sql
+    raise original_exception
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\compiler.py", line 889, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\Myblog\xblogff\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'comments_comment.head_img' in 'field list'")
+2018-07-06 11:25:24,367 [Thread-2:13364] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /single/7/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1054, "Unknown column 'comments_comment.head_img' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\Myblog\x_blog\views.py", line 77, in single
+    return render(request, 'x_blog/single.html', locals())
+  File "D:\Myblog\xblogff\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 232, in __len__
+    self._fetch_all()
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\compiler.py", line 899, in execute_sql
+    raise original_exception
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\compiler.py", line 889, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\Myblog\xblogff\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "D:\Myblog\xblogff\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'comments_comment.head_img' in 'field list'")
+2018-07-06 15:31:53,127 [Thread-38:4712] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Post' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Post' object has no attribute 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\templatetags\highlight.py", line 34, in render
+    text_block = self.text_block.resolve(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 849, in resolve
+    value = self._resolve_lookup(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [content] in '333'
+2018-07-06 15:34:14,171 [Thread-43:10196] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /archives/2018/4/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\Myblog\x_blog\views.py", line 81, in archives
+    post = Post.objects.get(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
+    arg, value = filter_expr
+ValueError: not enough values to unpack (expected 2, got 0)

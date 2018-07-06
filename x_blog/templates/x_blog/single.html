@@ -77,12 +77,32 @@
                     <div class="clearfix"> </div>
                 </div>
 
+                <div class="leave-comment">
+                    <h4>请发表您的看法</h4>
+                    <p>邮箱以及您的个人网站信息不会公布，请放心填写。</p>
+                    <form action="{% url 'comments:post_comment' post.pk %}" method="post" class="comment-form">
+                        {% csrf_token %}
+{#                        <input type="file" name="head_img">#}
+                        <input type="text" for="{{ form.name.id_for_label }}" placeholder="名字" {{ form.name }} {{ form.name.errors }}
+                        <input type="text" for="{{ form.email.id_for_label }}" placeholder="邮箱" {{ form.email }} {{ form.email.errors }}
+                        <table class="table"></table>
+                        <input type="text" for="{{ form.url.id_for_label }}" placeholder="网址" {{ form.url }} {{ form.url.errors }}
+                        <textarea for="{{ form.text.id_for_label }}" placeholder="留言" {{ form.text }} {{ form.text.errors }}</textarea>
+                        <input type="submit" value="提交">
+                        <div class="clearfix"> </div>
+                    </form>
+                </div>
+
                 <div class="three-com">
-                    <h3>2 Comment <span>on</span> <label>Donec volutpat ligula non dapibus volutpat</label></h3>
+                    <h3>{{ post.comment_set.count }} 条评论 <label>在不久前发表</label></h3>
                     <div class="tom-grid">
                         {% for comment in comment_list %}
                         <div class="tom">
-                            <img src="{% static 'x_blog/images/co.png' %}" alt=" " />
+                            <script language="JavaScript">
+{#                                暂定随机使用三个头像#}
+                                id=Math.round(Math.random()*2+1)
+                                document.write("<img src={% static 'head_img/' %}"+id+".jpg>")
+                            </script>
                         </div>
                         <div class="tom-right">
                             <div class="Hardy">
@@ -103,21 +123,7 @@
 
                 </div>
 
-                <div class="leave-comment">
-                    <h4>请发表您的看法</h4>
-                    <p>Suspendisse tempor tellus sed nisl semper, quis condimentum turpis pharetra.</p>
-                    <form action="{% url 'comments:post_comment' post.pk %}" method="post" class="comment-form">
-                        {% csrf_token %}
-                        <input type="text" for="{{ form.name.id_for_label }}" placeholder="名字" {{ form.name }} {{ form.name.errors }}
-                        <input type="text" for="{{ form.email.id_for_label }}" placeholder="邮箱" {{ form.email }} {{ form.email.errors }}
-                        <table class="table"></table>
-                        <input type="text" for="{{ form.url.id_for_label }}" placeholder="网址" {{ form.url }} {{ form.url.errors }}
-                        <textarea for="
-{{ form.text.id_for_label }}" placeholder="留言" {{ form.text }} {{ form.text.errors }}</textarea>
-                        <input type="submit" value="提交">
-                        <div class="clearfix"> </div>
-                    </form>
-                </div>
+
             </div>
 
         <!-- //single -->

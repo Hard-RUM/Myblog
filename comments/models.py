@@ -1,9 +1,11 @@
 from django.db import models
 
+
 # Create your models here.
 
 
 class Comment(models.Model):
+    # head_img = models.ImageField(upload_to='head_img',null=True)
     name = models.CharField(max_length=100)
     email = models.EmailField()
     url = models.URLField()
