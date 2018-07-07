@@ -678,3 +678,287 @@ Traceback (most recent call last):
   File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
     arg, value = filter_expr
 ValueError: not enough values to unpack (expected 2, got 0)
+2018-07-07 11:40:47,524 [Thread-12:17016] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /archives/2018/4/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\Myblog\x_blog\views.py", line 81, in archives
+    post = Post.objects.get(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
+    arg, value = filter_expr
+ValueError: not enough values to unpack (expected 2, got 0)
+2018-07-07 13:06:18,939 [Thread-45:10636] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/x_blog/post/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 215, in _get_response
+    response = response.render()
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\response.py", line 107, in render
+    self.content = self.rendered_content
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\library.py", line 225, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 409, in date_hierarchy
+    } for month in months]
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 250, in __iter__
+    self._fetch_all()
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 152, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch):
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\compiler.py", line 847, in results_iter
+    row = self.apply_converters(row, converters)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\compiler.py", line 832, in apply_converters
+    value = converter(value, expression, self.connection, self.query.context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\functions\datetime.py", line 198, in convert_value
+    "Database returned an invalid datetime value. "
+ValueError: Database returned an invalid datetime value. Are time zone definitions for your database installed?
+2018-07-07 13:07:48,419 [Thread-52:16476] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/x_blog/post/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 215, in _get_response
+    response = response.render()
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\response.py", line 107, in render
+    self.content = self.rendered_content
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\library.py", line 225, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 409, in date_hierarchy
+    } for month in months]
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 250, in __iter__
+    self._fetch_all()
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 152, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch):
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\compiler.py", line 847, in results_iter
+    row = self.apply_converters(row, converters)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\compiler.py", line 832, in apply_converters
+    value = converter(value, expression, self.connection, self.query.context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\functions\datetime.py", line 198, in convert_value
+    "Database returned an invalid datetime value. "
+ValueError: Database returned an invalid datetime value. Are time zone definitions for your database installed?
+2018-07-07 13:08:57,252 [Thread-69:9408] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /archives/2018/4/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\Myblog\x_blog\views.py", line 81, in archives
+    post = Post.objects.get(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
+    arg, value = filter_expr
+ValueError: not enough values to unpack (expected 2, got 0)
+2018-07-07 13:16:45,121 [Thread-34:16424] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /archives/2018/7/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\Myblog\x_blog\views.py", line 81, in archives
+    post = Post.objects.get(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
+    arg, value = filter_expr
+ValueError: not enough values to unpack (expected 2, got 0)
+2018-07-07 13:16:48,237 [Thread-35:7472] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /archives/2018/4/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\Myblog\x_blog\views.py", line 81, in archives
+    post = Post.objects.get(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
+    arg, value = filter_expr
+ValueError: not enough values to unpack (expected 2, got 0)
+2018-07-07 15:02:01,964 [Thread-2:16048] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /archives/2018/7/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\Myblog\x_blog\views.py", line 81, in archives
+    post = Post.objects.get(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
+    arg, value = filter_expr
+ValueError: not enough values to unpack (expected 2, got 0)
+2018-07-07 15:02:17,751 [Thread-3:5436] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /archives/2018/7/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\Myblog\x_blog\views.py", line 81, in archives
+    post = Post.objects.get(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
+    arg, value = filter_expr
+ValueError: not enough values to unpack (expected 2, got 0)

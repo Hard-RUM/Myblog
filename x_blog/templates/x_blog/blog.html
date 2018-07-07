@@ -18,7 +18,7 @@
 {% endblock %}
 
 {% block main2 %}
-    <div class="col-xs-9 banner-body-right">
+    <div class="col-xs-9 banner-body-right" id="comment-area">
         <div class="gallery-head">
             <h5>博客</h5>
             <p>个人在博客上发表的原创内容除特别注明，可在注明链接（http://.com）前提下随意转载，无需通知本人。</p>
@@ -56,7 +56,7 @@
 {#                判断是否有上一页，来决定是否显示上一页#}
                 {% if page_obj.has_previous %}
                     <li>
-                        <a href="?page={{ page_obj.previous_page_number }}" aria-label="Next">
+                        <a href="?page={{ page_obj.previous_page_number }}#comment-area" aria-label="Next">
                             <span aria-hidden="true">上一页</span>
                         </a>
                     </li>
@@ -65,17 +65,17 @@
 {#                循环读取页码#}
                 {% for page_number in page_range %}
                     {% if page_obj.number == page_number %}
-                        <li class="active"><a href="?page={{ page_number }}">{{ page_number }}</a></li>
+                        <li class="active"><a href="?page={{ page_number }}#comment-area">{{ page_number }}</a></li>
 {#                        <a style="color: red" href="?page={{ page_number }}">{{ page_number }}</a>#}
                     {% else %}
-                        <li><a href="?page={{ page_number }}">{{ page_number }}</a></li>
+                        <li><a href="?page={{ page_number }}#comment-area">{{ page_number }}</a></li>
 {#                        <a href="?page={{ page_number }}">{{ page_number }}</a>#}
                     {% endif %}
                 {% endfor %}
 {#                判断是否下一页#}
                 {% if page_obj.has_next %}
                     <li>
-                        <a href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                        <a href="?page={{ page_obj.next_page_number }}#comment-area" aria-label="Next">
                             <span aria-hidden="true">下一页</span>
                         </a>
                     </li>

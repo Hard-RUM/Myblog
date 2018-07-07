@@ -78,10 +78,10 @@ def single(request, pk):
 
 
 def archives(request, year, month):
-    post = Post.objects.get(request)
+    # post = Post.objects.get(request)
     post_list = Post.objects.filter(created_time__year=year,
                                     created_time__month=month).order_by("-created_time")
-    post.increase_like()
+    # post.increase_like()
     return render(request, 'x_blog/blog.html', locals())
 
 

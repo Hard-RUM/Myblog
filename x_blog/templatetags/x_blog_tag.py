@@ -7,7 +7,7 @@ register = template.Library()
 
 # 指定最新文章部分显示个数为3,装饰器
 @register.simple_tag
-def get_recent_posts_list(num=3):
+def get_recent_posts_list(num=5):
     return Post.objects.all().order_by('-created_time')[:num]
 
 
