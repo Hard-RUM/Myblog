@@ -17,10 +17,12 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
+from x_blog.feeds import AllPostFeed
 
 urlpatterns = [
     url(r'^',include('x_blog.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^comments/',include('comments.urls')),
     url(r'^search/',include('haystack.urls')),
+    url(r'all/rss/$',AllPostFeed(),name='rss'),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

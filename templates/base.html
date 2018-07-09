@@ -157,7 +157,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                         </form>
                     </div>
-                    <h3>添加更多</h3>
+                    <h3>点击订阅</h3>
+                    <table class="table"></table>
+                    <div class="rss">
+                        <a href="{% url 'rss' %}"><img width="35" height="35" src="{% static 'x_blog/images/rss.jpg' %}"> RSS订阅</a>
+                    </div>
                 </div>
             </div>
             {% block main2 %}

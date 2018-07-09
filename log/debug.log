@@ -962,3 +962,37 @@ Traceback (most recent call last):
   File "D:\Myblog\xblogff\lib\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
     arg, value = filter_expr
 ValueError: not enough values to unpack (expected 2, got 0)
+2018-07-09 11:12:11,374 [Thread-34:16024] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /all/rss/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\contrib\syndication\views.py", line 41, in __call__
+    feedgen = self.get_feed(obj, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\contrib\syndication\views.py", line 175, in get_feed
+    title = self._get_dynamic_attr('item_title', item)
+  File "D:\Myblog\xblogff\lib\site-packages\django\contrib\syndication\views.py", line 92, in _get_dynamic_attr
+    return attr(obj)
+  File "D:\Myblog\Myblog\x_blog\feeds.py", line 24, in item_title
+    return '[%s]%s' % (item.categroy, item.titlee)
+AttributeError: 'Post' object has no attribute 'categroy'
+2018-07-09 11:20:24,491 [Thread-2:13184] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /all/rss/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\django\contrib\syndication\views.py", line 41, in __call__
+    feedgen = self.get_feed(obj, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\contrib\syndication\views.py", line 179, in get_feed
+    description = self._get_dynamic_attr('item_description', item)
+  File "D:\Myblog\xblogff\lib\site-packages\django\contrib\syndication\views.py", line 92, in _get_dynamic_attr
+    return attr(obj)
+  File "D:\Myblog\Myblog\x_blog\feeds.py", line 28, in item_description
+    return item.content
+AttributeError: 'Post' object has no attribute 'content'
