@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from .views import index, photos, blog, mail, short_codes, single, archives,categories,BlogView
+from .views import index, photos, blog, mail, short_codes, single, archives, categories, BlogView, TagsView
 
 app_name = 'x_blog'
 
@@ -20,4 +20,6 @@ urlpatterns = [
     url(r'^archives/(?P<year>[0-9]{4})/(?P<month>[1-9]|1[0-2])/$', archives, name='archives'),
 
     url(r'^categories/(?P<pk>\d+)/$', categories, name='categories'),
+
+    url(r'^tags/(?P<pk>\d+)/$', TagsView.as_view(), name='tags'),
 ]

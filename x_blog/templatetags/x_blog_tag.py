@@ -1,6 +1,6 @@
 from django import template
-
-from ..models import Post, Category
+from django.db.models import Count
+from ..models import Post, Category,Tag
 
 register = template.Library()
 
@@ -21,3 +21,8 @@ def archives(num=5):
 @register.simple_tag
 def classification():
     return Category.objects.all()
+
+#云标签
+@register.simple_tag
+def get_tags():
+    return Tag.objects.annotate(num_post=Count('post')).filter(num_post__gt=0)

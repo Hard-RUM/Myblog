@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 # Create your views here.
-from .models import Post, Category
+from .models import Post, Category,Tag
 from django.views.generic import ListView
 from utils import custom_paginator
 from comments.forms import CommentForm
@@ -97,3 +97,13 @@ def categories(request, pk):
     post_list = category.post_set.all()
 
     return render(request, 'x_blog/blog.html', {'post_list': post_list})
+
+
+
+class TagsView(BlogView):
+    #重写get_queryset方法，修改默认的查询行为
+    def get_queryset(self):
+        #根据pk查出tag对象
+        tag = get_object_or_404(Tag,pk=self.kwargs.get('pk'))
+        #有了tag对象只会，根据这个tag对象查出tag下的post文章
+        return super().get_queryset().filter(tag=tag)

@@ -62,17 +62,16 @@
                     </div>
                     <div class="cat-grid">
                         <h4><span>文章</span>标签</h4>
-                        <div class="top-social-icons">
-                                <a href="#">Cards</a>
-                                <a href="#">Website</a>
-                                <a href="#">Icons</a>
-                            <div class="clearfix"> </div>
-                                <a href="#">Themeforest</a>
-                                <a href="#">Interfaces</a>
-                            <div class="clearfix"> </div>
-                                <a href="#">Inspiration</a>
-                            <div class="clearfix"> </div>
-                        </div>
+                        {% get_tags as tag_list %}
+                        <ul>
+                            {% for tag in tag_list %}
+                            <li>
+                                <a href="{% url 'x_blog:tags' tag.pk %}">{{ tag.name }}</a>
+                            </li>
+                            {% empty %}
+                                暂无标签
+                            {% endfor %}
+                        </ul>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
