@@ -200,11 +200,11 @@ LOGGING = {
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'x_blog.whoosh_cn_backend.WhooshEngine',
-        'PATH': os.path.join(BASE_DIR, 'templates/whoosh_index')
+        'PATH': os.path.join(BASE_DIR, 'whoosh_index')
     }
 }
 
-HAYSTACK_SEARCH_RESULTS_PER_PAGE = 2
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 3
 
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 

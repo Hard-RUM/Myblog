@@ -996,3 +996,815 @@ Traceback (most recent call last):
   File "D:\Myblog\Myblog\x_blog\feeds.py", line 28, in item_description
     return item.content
 AttributeError: 'Post' object has no attribute 'content'
+2018-07-11 11:13:10,054 [Thread-2:168] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Post' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Post' object has no attribute 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\templatetags\highlight.py", line 34, in render
+    text_block = self.text_block.resolve(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 849, in resolve
+    value = self._resolve_lookup(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [content] in '类别测试'
+2018-07-11 11:17:25,601 [Thread-4:4004] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Post' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Post' object has no attribute 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\templatetags\highlight.py", line 34, in render
+    text_block = self.text_block.resolve(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 849, in resolve
+    value = self._resolve_lookup(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [content] in 'angry'
+2018-07-11 11:17:48,978 [Thread-8:17856] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Post' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Post' object has no attribute 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\templatetags\highlight.py", line 34, in render
+    text_block = self.text_block.resolve(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 849, in resolve
+    value = self._resolve_lookup(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [content] in '类别测试'
+2018-07-11 11:18:22,857 [Thread-9:8164] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Post' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Post' object has no attribute 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\templatetags\highlight.py", line 34, in render
+    text_block = self.text_block.resolve(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 849, in resolve
+    value = self._resolve_lookup(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [content] in '类别测试'
+2018-07-11 11:18:42,664 [Thread-10:1784] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Post' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Post' object has no attribute 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\templatetags\highlight.py", line 34, in render
+    text_block = self.text_block.resolve(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 849, in resolve
+    value = self._resolve_lookup(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [content] in '类别测试'
+2018-07-11 11:24:05,099 [Thread-11:12604] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Post' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Post' object has no attribute 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\templatetags\highlight.py", line 34, in render
+    text_block = self.text_block.resolve(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 849, in resolve
+    value = self._resolve_lookup(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [content] in '类别测试'
+2018-07-11 12:11:03,767 [Thread-2:12868] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 1038, in find_library
+    return parser.libraries[name]
+KeyError: 'debugtools_tags'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 312, in do_extends
+    nodelist = parser.parse()
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 1095, in load
+    lib = find_library(parser, name)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 1042, in find_library
+    name, "\n".join(sorted(parser.libraries.keys())),
+django.template.exceptions.TemplateSyntaxError: 'debugtools_tags' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+highlight
+i18n
+l10n
+log
+more_like_this
+static
+staticfiles
+tz
+x_blog_tag
+2018-07-11 12:11:37,518 [Thread-3:8720] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 1038, in find_library
+    return parser.libraries[name]
+KeyError: 'blog_tags'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 154, in render
+    compiled_parent = self.get_parent(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 151, in get_parent
+    return self.find_template(parent, context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 131, in find_template
+    template_name, skip=history,
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 1095, in load
+    lib = find_library(parser, name)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 1042, in find_library
+    name, "\n".join(sorted(parser.libraries.keys())),
+django.template.exceptions.TemplateSyntaxError: 'blog_tags' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+highlight
+i18n
+l10n
+log
+more_like_this
+static
+staticfiles
+tz
+x_blog_tag
+2018-07-11 12:13:06,479 [Thread-4:10884] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 507, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_recent_posts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 154, in render
+    compiled_parent = self.get_parent(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 151, in get_parent
+    return self.find_template(parent, context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 131, in find_template
+    template_name, skip=history,
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 509, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 571, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 83: 'get_recent_posts'. Did you forget to register or load this tag?
+2018-07-11 12:14:50,981 [Thread-5:748] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Post' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Post' object has no attribute 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\templatetags\highlight.py", line 34, in render
+    text_block = self.text_block.resolve(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 849, in resolve
+    value = self._resolve_lookup(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [content] in '类别测试'
+2018-07-11 12:15:28,450 [Thread-15:3488] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Post' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Post' object has no attribute 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "D:\Myblog\xblogff\lib\site-packages\haystack\templatetags\highlight.py", line 34, in render
+    text_block = self.text_block.resolve(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 849, in resolve
+    value = self._resolve_lookup(context)
+  File "D:\Myblog\xblogff\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [content] in 'angry'
